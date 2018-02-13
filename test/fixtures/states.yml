@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: MyString
+  type: 
+  university: MyString
+  deviation: MyString
+  time: MyString
+
+two:
+  year: MyString
+  type: 
+  university: MyString
+  deviation: MyString
+  time: MyString

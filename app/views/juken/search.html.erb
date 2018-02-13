@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>参考書</title>
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+        <link rel="stylesheet" href="mycss.css">
+        <%= stylesheet_link_tag "mycss", :media => "all"%>
+
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div id="title">
+                    <h1>参考書選びから</h1>
+                    <h1>勉強スケジュールまで！</h1>
+                </div>
+                <div id="title_image">
+                    <h1><%= image_tag 'icon.png', :width => '100', :height => '100' %></h1>
+                </div>
+            </div>
+            <div id="main">
+                <div id="contents">
+                    <h2>完全無料</h2>
+                    <h2>・当サイトのポイント</h2>
+                    <h3>1)あなたにピッタリな参考書がわかる！</h3>
+                    <p>たった5つの項目を入力するだけで、あなたにピッタリの参考書をお教えします。</p>
+                    <h3>2)あなたに合った勉強スケジュールがわかる！</h3>
+                    <p>受験までの残り日数と今の偏差値から、勉強のペース配分をお教えします。</p>
+                </div>
+                <div id="contents_image">
+                    <h1><%= image_tag 'content_image.png', :width => '225', :height => '300' %></h1>
+                </div>
+                <div id="form">
+                    <%= form_for State.new do |f| %>
+                    <div class="category">
+                        <p>
+                            学年
+                        </p>
+                        <p>
+                            <%= select_tag 'state[year]', options_for_select(["1", "2", "3"]) %>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <p>
+                            文理
+                        </p>
+                        <p>
+                            <%= select_tag 'state[type]', options_for_select(["文系", "理系"]) %>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <p>
+                            志望大学
+                        </p>
+                        <p>
+                            <%= select_tag 'state[university]', options_for_select(["東大・京大・医学部", "早慶国公立非医", "MARCHレベル", "その他"]) %>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <p>
+                            現在の偏差値
+                        </p>
+                        <p>
+                            <%= select_tag 'state[deviation]', options_for_select(["~40", "41~50", "51~60", "61~70", "71~"]) %>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <p>
+                            1日の学習時間
+                        </p>
+                        <p>
+                            <%= select_tag 'state[time]', options_for_select(["1時間未満", "1~2時間", "2~3時間", "3~4時間", "4時間以上"]) %>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <p>
+                            参考書のスタイル
+                        </p>
+                        <p>
+                            <%= select_tag 'state[layout]', options_for_select(["文字多め", "そこそこ文字多め", "普通", "そこそこ図多め", "図多め"]) %>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <p>
+                            演習問題の量
+                        </p>
+                        <p>
+                            <%= select_tag 'state[excercise]', options_for_select(["問題量重視", "そこそこ問題量重視", "普通", "そこそこ解説重視", "解説重視"]) %>
+                        </p>
+                    </div>
+                    <div class="search">
+                        <input type="submit" name="commit" value="検索" class="button" data-disable-with="検索" />
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+            <div id="footer">Copylight</div>
+        </div>
+    </div>
+</body>
+</html>

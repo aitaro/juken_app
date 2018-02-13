@@ -1,0 +1,137 @@
+/* mycss.css */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: Verdana, Arial;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+body > #container {
+    height: auto;
+}
+
+#container {
+    min-height: 100%;
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background: rgba(204,204,204,0.5);
+    box-shadow: 0 0 3px rgba(0,0 0,0.5);
+}
+
+#header {
+    margin-bottom: 30px;
+    border-bottom: 5px solid #00f;
+}
+
+#title {
+  font-size: 14px;
+  float: left;
+  width: 16%;
+}
+
+#title_image {
+  margin-left: 16%;
+}
+
+#main {
+      overflow: hidden;
+      margin-bottom: 90px;
+}
+
+#contents {
+    float: left;
+    width: 400px;
+    margin-left: 10%;
+}
+
+#contents_image {
+  float: right;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#form {
+  float: left;
+  width: 800px;
+  border: 1px solid #ccc;
+  margin-left: 15%;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.category {
+  float: left;
+  width: 120px;
+  margin: 20px 10px 20px 10px;
+}
+
+.category:nth-child(2) {
+  width: 100px;
+}
+
+.category:nth-child(3) {
+  width: 140px;
+}
+
+#footer {
+    font-size: 12px;
+    color: #ccc;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding: 10px 0 20px;
+}
+
+.search {
+  text-align: center;
+}
+
+.button{
+
+  font-size: 32px;
+  padding: 0 128px;
+  background: white;
+  border-color: blue;
+}
+
+.button:hover {
+  background: #ccc;
+}
+
+h2 {
+    font-size: 14px;
+    color: rgba(0,0,0,0.7);
+    padding-bottom: 3px;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  text-decoration: underline;
+}
+
+h4 {
+    border-bottom: 1px solid #ccc;
+    padding: 3px 0;
+    margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 32px;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 4px;
+}
+
+form>p {
+  margin-bottom: 0;
+}

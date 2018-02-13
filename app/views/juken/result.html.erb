@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>参考書</title>
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+        <link rel="stylesheet" href="mycss2.css">
+        <%= stylesheet_link_tag "mycss2", :media => "all"%>
+
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div id="title">
+                    <h1>参考書選びから</h1>
+                    <h1>勉強スケジュールまで！</h1>
+                </div>
+                <div id="title_image">
+                    <h1><%= image_tag 'icon.png', :width => '100', :height => '100' %></h1>
+                </div>
+            </div>
+            <!-- #header -->
+            <div id="main">
+                <div id="answer">
+                    <h2>
+                        あなたは</h2>
+                    <h3>
+                        <p><%= @year %></p>年生の<p><%= @types %></p>で、志望校は<p><%= @universitys %></p>
+                    </h3>
+                    <h3>現在の偏差値は<p><%= @deviations %></p>で、</h3>
+                    <h3>1日<p><%= @times %></p>勉強しているのですね！</h3>
+                    <h3>そんな<p><%= @layouts %></p>で
+                      <p><%= @excercises %></p>なあなたに</h3>
+                    <h3>このスケジュールはいかがでしょうか？</h3>
+                </div>
+                <div id="schedule">
+                    <div class="book" id="book1">
+                        <p><%= @message1 %></p>
+                        <div class="level">
+                            <p>網羅系</p>
+                        </div>
+                        <p><%= @book[0][:name] %></br>
+                        <%= @book[0][:publisher] %></br>
+                        <%= @book[0][:price] %>円</p>
+                        <div class="book_image"><%= image_tag "image#{@book[0][:jpgno]}.jpg", :width => '120', :height => '170' %></div>
+                    </div>
+                    <div class="arrowbox">
+                        <div class="arrow sample"></div>
+                    </div>
+                    <div class="book">
+                        <p><%= @message2 %></p>
+                        <div class="level">
+                            <p>中級</p>
+                        </div>
+                        <p><%= @book[1][:name] %></br>
+                        <%= @book[1][:publisher] %></br>
+                        <%= @book[1][:price] %>円</p>
+                        <div class="book_image"><%= image_tag "image#{@book[1][:jpgno]}.jpg", :width => '120', :height => '170' %></div>
+                    </div>
+                    <div class="arrowbox">
+                        <div class="arrow sample"></div>
+                    </div>
+                    <div class="book">
+                        <p><%= @message3 %></p>
+                        <div class="level">
+                            <p>上級</p>
+                        </div>
+                        <p><%= @book[2][:name] %></br>
+                        <%= @book[2][:publisher] %></br>
+                        <%= @book[2][:price] %>円</p>
+                        <div class="book_image"><%= image_tag "image#{@book[2][:jpgno]}.jpg", :width => '120', :height => '170' %></div>
+                    </div>
+                    <div class="arrowbox">
+                        <div class="arrow sample"></div>
+                    </div>
+                    <div class="book" id="book4">
+                        <p><%= @message4 %></p>
+                        <div class="level">
+                            <p>過去問</p>
+                        </div>
+                        <p><%= @book[3][:name] %></br>
+                        <%= @book[3][:publisher] %></br>
+                        <%= @book[3][:price] %>円</p>
+                        <div class="book_image"><%= image_tag "image#{@book[3][:jpgno]}.jpg", :width => '120', :height => '170' %></div>
+                    </div>
+                </div>
+            </div>
+            <p><%=link_to 'Home', '/search'%></p>
+            <div id="footer">Copylight</div>
+        </div>
+        <!-- container -->
+    </body>
+</html>
